@@ -86,9 +86,9 @@
       console.log(flag);
       flag ? document.getElementById('audios').play() : document.getElementById('audios').pause();
     };
-    // // document.addEventListener('WeixinJSBridgeReady', function () {
-    // //   document.getElementById('audios').play()
-    // // })
+    document.addEventListener('WeixinJSBridgeReady', function () {
+      document.getElementById('audios').play()
+    })
     // setTimeout(() => {
     //   document.getElementById('audios').play()
     // }, 3000)
