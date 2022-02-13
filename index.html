@@ -72,7 +72,12 @@
 <body>
   <div class="box"></div>
   <p>you are the only the here</p>
-  <audio src="./asserts/music/music1.mp3" autoplay="autoplay" loop="loop" controls></audio>
+  <audio src="./asserts/music/music1.mp3" autoplay="autoplay" loop="loop" id="audios"></audio>
+  <script>
+    document.addEventListener('WeixinJSBridgeReady', function () {
+      document.getElementById('audios').play()
+    })
+  </script>
 </body>
 
 </html>
