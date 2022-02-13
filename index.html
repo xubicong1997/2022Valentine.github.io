@@ -66,17 +66,32 @@
       color: rgba(255, 0, 0, 0.5);
       text-shadow: 0 0 2px rgba(255, 0, 0, 0.5);
     }
+
+    .btn {
+      margin: auto;
+      background-color: white;
+    }
   </style>
 </head>
 
 <body>
+  <button class="btn" onclick="handleClick()">戳我^_^</button>
   <div class="box"></div>
-  <p>you are the only the here</p>
+  <p>You are my only one</p>
   <audio src="./asserts/music/music1.mp3" autoplay="autoplay" loop="loop" id="audios"></audio>
   <script>
-    document.addEventListener('WeixinJSBridgeReady', function () {
-      document.getElementById('audios').play()
-    })
+    let flag = false;
+    const handleClick = () => {
+      flag = !flag;
+      console.log(flag);
+      flag ? document.getElementById('audios').play() : document.getElementById('audios').pause();
+    };
+    // // document.addEventListener('WeixinJSBridgeReady', function () {
+    // //   document.getElementById('audios').play()
+    // // })
+    // setTimeout(() => {
+    //   document.getElementById('audios').play()
+    // }, 3000)
   </script>
 </body>
 
